@@ -234,6 +234,11 @@ rm -f *.txt
 
 ```
 
+Use the below command to give it executable permission
+```shell
+chmod +x backup.sh
+```
+
 ### 4. Automate the script running
 
 Use cron to run the script when necessary. for example if you want to run on everynight 1 am then use this commands
@@ -257,10 +262,12 @@ crontab -l
 
 ```
 
-### 5. 4.	Lifecycle management in S3 for appropriate retention period: 
+### 5. 4.	Lifecycle management in S3 for appropriate retention period:
+
 In S3 retention period is given in this manner so that we can achieve our retention period without thinking about data being amassing the space in S3 and paying for it at the end.
 ![Retention Policy](image.png)
 
 ## Why not use lambda for the purpose
-- In Lambda the major yet critical challenge we face is to change the parameter group and turn the force_ssl to 0. Which may become critical from security POV. So, we went with EC2 to avoid any security incompatibility. 
-- Another problem we would face if we change the parameter group then on modification the RDS instances will reboot which will create downtime.
+
+- In Lambda the major yet critical challenge we face is to change the parameter group and turn the force_ssl to 0. Which may become critical from security POV. So, we went with EC2 to avoid any security incompatibility.
+- Another problem we would face if we change the parameter group then on modification the RDS instances will reboot which will create downtime.
