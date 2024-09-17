@@ -259,7 +259,7 @@ crontab -l
 
 ### 5. 4.	Lifecycle management in S3 for appropriate retention period: 
 In S3 retention period is given in this manner so that we can achieve our retention period without thinking about data being amassing the space in S3 and paying for it at the end.
-![Retention Policy](![alt text](image.png))
+![Retention Policy](image.png)
 
 ## Why not use lambda for the purpose
 - In Lambda the major yet critical challenge we face is to change the parameter group and turn the force_ssl to 0. Which may become critical from security POV. So, we went with EC2 to avoid any security incompatibility. 
