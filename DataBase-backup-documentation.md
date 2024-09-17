@@ -265,7 +265,8 @@ crontab -l
 ### 5. 4.	Lifecycle management in S3 for appropriate retention period:
 
 In S3 retention period is given in this manner so that we can achieve our retention period without thinking about data being amassing the space in S3 and paying for it at the end.
-![Retention Policy](image.png)
+
+![custom retention based on requirement](./image.svg)
 
 ## Why not use lambda for the purpose
 
