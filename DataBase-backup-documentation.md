@@ -125,7 +125,7 @@ backup
 
 * Use the below script to take backup
 
-```git-rebase {"id":"01J7ZSHFZN2GWJZ7H188PK6BA3"}
+```shell
 #!/bin/bash
 
 # Set variables
@@ -231,7 +231,6 @@ done < "$SECRETS_FILE_PATH"
 
 # Remove all text files in the current directory
 rm -f *.txt
-
 ```
 
 Use the below command to give it executable permission
