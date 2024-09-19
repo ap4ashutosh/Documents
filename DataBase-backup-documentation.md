@@ -64,7 +64,7 @@ To take backup of RDS databases the bash script will be run on an ec2 instance, 
 
 ```
 
-Note: *Here I have given full access to **secrets manager**, **rds** as i needed to take backup od all rds*
+Note: *Here I have given full access to **secrets manager**, **rds** as i needed to take backup of all rds*
 
 ### 3. Preparation of backup EC2:
 
@@ -125,7 +125,7 @@ backup
 
 * Use the below script to take backup
 
-```shell
+```sh {"id":"01J84N08QZTSG8EDNEE572EZFP"}
 #!/bin/bash
 
 # Set variables
@@ -231,11 +231,14 @@ done < "$SECRETS_FILE_PATH"
 
 # Remove all text files in the current directory
 rm -f *.txt
+
 ```
 
 Use the below command to give it executable permission
-```shell
+
+```sh {"id":"01J84N08R2V1DP4441HZ0W3123"}
 chmod +x backup.sh
+
 ```
 
 ### 4. Automate the script running
@@ -265,7 +268,7 @@ crontab -l
 
 In S3 retention period is given in this manner so that we can achieve our retention period without thinking about data being amassing the space in S3 and paying for it at the end.
 
-![custom retention based on requirement](./image.svg)
+<p style="text-align: center"><img src="image.svg"></p>
 
 ## Why not use lambda for the purpose
 
